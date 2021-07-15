@@ -1,5 +1,5 @@
 {
-  "name": "appproject",
+  "name": "login",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -44,5 +44,17 @@
       "json",
       "node"
     ]
-  }
+  },
+  "description": "login con react-native",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcelinazoto/proyectseminario.git"
+  },
+  "author": "Yamina Salazar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcelinazoto/proyectseminario/issues"
+  },
+  "homepage": "https://github.com/marcelinazoto/proyectseminario#readme"
 }
