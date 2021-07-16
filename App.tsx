@@ -22,13 +22,9 @@ class App extends React.Component<any, Mystate> {
     // Get the users ID token
     return new Promise(async (resolve, reject) =>{
       console.log("Login");
-      const { idToken } = await GoogleSignin.signIn();
-  
-      // Create a Google credential with the token
-      const googleCredential = firebase.getApp(). auth.GoogleAuthProvider.credential(idToken);
-      console.log(googleCredential)
-      // Sign-in the user with the credential
-      resolve(firebase.getApp().auth().signInWithCredential(googleCredential));
+      const {idToken, user} = await GoogleSignin.signIn();
+      console.log(data);
+      resolve(user);
     });
   }
   componentDidMount() {
@@ -82,28 +78,30 @@ class App extends React.Component<any, Mystate> {
 }
 
 const styles = StyleSheet.create({
+  
   body: {
     flex: 1
-  },
-  container:{
-    justifyContent: 'center',
-    alignItem: 'center',
   },
 
   logo:{ 
   height: "60%",
   width: "60%"
   
-},
-containerTextfield: {
-  padding: 10
-},
-centerObjects: {
-  alignItems: "center"
-},
-marginTop: {
-  marginTop: 10
-},
+ },
+ /*container:{
+  justifyContent: 'center',
+  alignItem: 'center',
+},*/
 
+  containerTextfield: {
+  padding: 10
+ },
+ centerObjects: {
+  alignItems: "center"
+ },
+ marginTop: {
+  marginTop: 10
+ },
+ 
 });
 export default App;
